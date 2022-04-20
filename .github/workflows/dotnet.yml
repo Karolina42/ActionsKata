@@ -46,7 +46,7 @@ jobs:
     - name: Test
       run: dotnet test --verbosity normal
   publish:
-    needs: [test, sonarqube]
+    needs: [test, sonarqube, build]
     runs-on: ubuntu-latest
 
     steps:
