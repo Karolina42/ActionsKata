@@ -16,7 +16,7 @@ jobs:
     - name: Welcome
       run: echo "Welcome"
   build:
-
+    needs: welcome
     runs-on: ubuntu-latest
 
     steps:
@@ -32,7 +32,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
   test:
-    
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -42,7 +42,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
   publish:
-    
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
