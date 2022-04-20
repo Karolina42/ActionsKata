@@ -14,8 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Welcome
-    - run: echo "Welcome"
-      uses: actions/setup-dotnet@v2
+      run: echo "Welcome"
   build:
 
     runs-on: ubuntu-latest
