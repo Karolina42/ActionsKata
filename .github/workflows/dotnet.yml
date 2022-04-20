@@ -8,12 +8,14 @@ on:
 
 jobs:
   welcome:
+    name: Welcome
     runs-on: ubuntu-latest
     
     steps:
     - uses: actions/checkout@v3
     - name: Welcome
     - run: echo "Welcome"
+      uses: actions/setup-dotnet@v2
   build:
 
     runs-on: ubuntu-latest
